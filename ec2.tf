@@ -5,3 +5,11 @@ tags = {
   name ="Terraform-server"
 }
 }
+
+resource "aws_instance" "server2" {
+instance_type = var.instance_type
+ami = data.aws_ami.ami1.id
+tags = {
+  name ="Terraform-server2"
+}
+}
